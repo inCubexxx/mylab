@@ -23,6 +23,50 @@ const categories = {
 
 const products = [
   {
+    name: "KATE(ケイト) ジュレリープファンデーション",
+    category: "beauty",
+    price: 2200,
+    priceFrom: true,
+    image: "images/Kate Jelly Foundation.png",
+    comment: "美容液ジュレで生ツヤ肌！ハイカバーなのに厚塗り感ゼロ",
+    shop: "楽天",
+    link: "https://item.rakuten.co.jp/rakuten24-cosmetics/406492/",
+    isNew: true
+  },
+  {
+    name: "KATE(ケイト) リップモンスター クリスタルポッド",
+    category: "beauty",
+    price: 1650,
+    priceFrom: false,
+    image: "images/Kate Lip Monster Crystal Pod.png",
+    comment: "透け感発色でうるツヤ唇！潤いが続くシアーリップ！",
+    shop: "楽天",
+    link: "https://item.rakuten.co.jp/sian/019535kt/",
+    isNew: true
+  },
+  {
+    name: "excel(エクセル) スキニーリッチシャドウ N",
+    category: "beauty",
+    price: 1650,
+    priceFrom: false,
+    image: "images/Excel Skinny Rich Shadow.png",
+    comment: "粉飛びしにくく肌にピタッ！しっとりなめらかな発色",
+    shop: "楽天",
+    link: "https://item.rakuten.co.jp/rakuten24/405245/",
+    isNew: true
+  },
+  {
+    name: "Visee(ヴィセ) レイヤード フルリ チーク",
+    category: "beauty",
+    price: 1650,
+    priceFrom: false,
+    image: "images/Visee Layered Fleuri Cheek.png",
+    comment: "花咲くような血色チーク！マット✕グロウの2層で立体感",
+    shop: "楽天",
+    link: "https://item.rakuten.co.jp/daikisone/visee6-1/",
+    isNew: true
+  },
+  {
     name: "Torriden（トリデン）ダイブイン セラム",
     category: "beauty",
     price: 3300,
