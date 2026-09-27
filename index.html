@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- スマホで正しい幅で表示するための設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己ラボ | お気に入りアイテム</title>
+  <meta name="description" content="自己ラボが本当に使っているファッション・美容アイテムを紹介しています。">
+  <!-- ブラウザのタブに表示されるアイコン（ファビコン） -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- iPhone のホーム画面に追加したときのアイコン -->
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ステマ規制（景品表示法）対応：広告であることを最初に表示する -->
+  <p class="pr-notice">【PR】当ページはアフィリエイト広告を利用しています</p>
+
+  <header class="hero">
+    <p class="hero-sub">自己ラボ</p>
+    <h1 class="hero-title">自分らしく生きよう！！</h1>
+    <p class="hero-text">わたしが本当に使っている<br>お気に入りアイテムだけを集めました♡</p>
+    <a class="insta-button" href="https://www.instagram.com/jiko.lab/" target="_blank" rel="noopener">
+      Instagram を見る
+    </a>
+  </header>
+
+  <main>
+    <section class="products">
+      <h2 class="section-title">Favorite Items</h2>
+
+      <!-- 絞り込みボタン（script.js が自動で作る） -->
+      <div id="filters" class="filters"></div>
+
+      <!-- 商品カード（script.js が products.js を読んで自動で作る） -->
+      <div id="product-list" class="product-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-note">
+      Amazonのアソシエイトとして、自己ラボは適格販売により収入を得ています。<br>
+      価格は掲載時点のものです。最新の情報は各ショップのページでご確認ください。
+    </p>
+    <a class="footer-insta" href="https://www.instagram.com/jiko.lab/" target="_blank" rel="noopener">@jiko.lab</a>
+    <p class="copyright">&copy; 自己ラボ</p>
+  </footer>
+
+  <!-- 読み込む順番が大事：先に商品データ、次にそれを使う処理 -->
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

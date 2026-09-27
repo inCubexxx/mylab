@@ -1,0 +1,242 @@
+/* =============================================
+   色の設定
+   ここを変えると、ページ全体の色がまとめて変わります
+   ============================================= */
+:root {
+  --pink: #f4a7b9;        /* メインのピンク */
+  --pink-dark: #e27d98;   /* ボタンなど濃いめのピンク */
+  --pink-light: #fde8ee;  /* 背景の淡いピンク */
+  --cream: #fffafb;       /* カードの背景 */
+  --text: #5a4a4f;        /* 文字色（真っ黒よりやわらかい） */
+  --text-light: #9a8a8f;  /* 補足の文字色 */
+}
+
+* {
+  box-sizing: border-box; /* 幅に余白や枠線を含めて計算する */
+}
+
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: var(--text);
+  background: var(--pink-light);
+  line-height: 1.7;
+}
+
+/* ---------- PR表記 ---------- */
+.pr-notice {
+  margin: 0;
+  padding: 6px 16px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-light);
+  background: #fff;
+}
+
+/* ---------- ヒーロー（最初に見える部分） ---------- */
+.hero {
+  padding: 56px 16px 48px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff 0%, var(--pink-light) 100%);
+}
+
+.hero-sub {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: var(--pink-dark);
+}
+
+.hero-title {
+  margin: 8px 0 16px;
+  font-size: 28px;
+}
+
+.hero-text {
+  margin: 0 0 28px;
+  font-size: 15px;
+}
+
+.insta-button {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(90deg, #f58fb0, #c79bf2);
+  box-shadow: 0 4px 12px rgba(226, 125, 152, 0.3);
+}
+
+/* ---------- 商品一覧 ---------- */
+.products {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+}
+
+.section-title {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: var(--pink-dark);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.filter-button {
+  padding: 6px 18px;
+  border: 1px solid var(--pink);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--pink-dark);
+  background: #fff;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  color: #fff;
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+}
+
+/* スマホは2列 */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* 画面が広いとき（タブレット・PC）は3列 */
+@media (min-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+/* ---------- 商品カード ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--cream);
+  box-shadow: 0 2px 10px rgba(226, 125, 152, 0.12);
+}
+
+.card-image {
+  position: relative;       /* NEWバッジの位置の基準にする */
+  aspect-ratio: 1 / 1;      /* 正方形にそろえる（Instagramと同じ） */
+  background: #fff;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* 縦横比を保ったまま枠いっぱいに表示 */
+}
+
+.card-image.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--pink);
+  background: linear-gradient(135deg, #fff, var(--pink-light));
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--pink-dark);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                  /* カードの高さをそろえる */
+  padding: 12px;
+}
+
+.card-category {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.card-name {
+  margin: 2px 0 6px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.card-comment {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.card-price {
+  margin: auto 0 10px;      /* 上を auto にして、価格とボタンを下にそろえる */
+  font-weight: 700;
+}
+
+.card-button {
+  display: block;
+  padding: 8px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: var(--pink-dark);
+}
+
+.card-button:hover,
+.insta-button:hover {
+  opacity: 0.85;
+}
+
+/* ---------- フッター ---------- */
+.footer {
+  padding: 32px 16px;
+  text-align: center;
+  background: #fff;
+}
+
+.footer-note {
+  margin: 0 0 16px;
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.footer-insta {
+  color: var(--pink-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.copyright {
+  margin: 12px 0 0;
+  font-size: 11px;
+  color: var(--text-light);
+}
